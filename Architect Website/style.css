@@ -1,0 +1,198 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+header {
+  margin: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  display: none;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 36px;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+  margin: 3px;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin: 0px 8px;
+}
+
+a.active {
+  border-bottom: 1px solid black;
+}
+
+.works {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 49%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.card img:hover {
+  opacity: 0.8;
+}
+
+.card h2 {
+  margin: 8px 0px 16px 0px;
+  font-weight: 300;
+}
+
+.about {
+  width: 50%;
+  margin: 100px 200px;
+}
+
+.banner {
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.message {
+  color: grey;
+  font-size: 50px;
+  font-style: italic;
+  margin-top: 0px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.contact p {
+  margin: 0;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .burger {
+    display: block;
+    z-index: 1;
+  }
+
+  .navbar .menu {
+    display: none;
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about {
+    width: 80%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .message {
+    font-size: 35px;
+  }
+}
+
+.animationLine1 {
+  animation: 1s line1;
+  animation-fill-mode: forwards;
+}
+
+.animationLine2 {
+  animation: 1s line2;
+  animation-fill-mode: forwards;
+}
+
+.animationLine3 {
+  animation: 1s line3;
+  animation-fill-mode: forwards;
+}
+
+@keyframes line1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg) translate(4px, 6px);
+  }
+}
+
+@keyframes line2 {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes line3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg) translate(4px, -6px);
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: -120px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 16px;
+  transition: transform 1s;
+}
+
+.mobileMenu a {
+  color: black;
+  text-decoration: none;
+  margin: 16px 0px;
+}
+
+.openSidebar {
+  transform: translateX(-120px);
+}
